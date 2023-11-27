@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<link href="css/portfoliocss.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<header>
+
+
+		<a href="home.html"><img class="logo" src="./Used Resources/SS Logo white.png" alt="logo" width="120px"
+				height="70px"></a>
+
+
+		<input type="checkbox" id="nav-toggle" class="nav-toggle">
+		<nav>
+
+			<ul class="nav__links">
+				<div class="pages">
+					<li><a href="home.html" title="home">Home</a></li>
+					<li><a href="about.html" title="about">About</a></li>
+					<li><a href="portfolio.html" title="portfolio">Portfolio</a></li>
+					<li><a href="contact.html" title="contact">Contact</a></li>
+				</div>
+
+				<div class="socials" style="width: 320px;">
+					<ul class="socials__links">
+						<a href="https://www.instagram.com/iamsaimadhav" target="_blank">
+							<img src="./Used Resources/Instagram logo.png" alt="insta" width="45" height="45"></a>
+						<a href="https://www.twitter.com/iamsaimadhav" target="_blank">
+							<img src="./Used Resources/Twitter logo white.png" alt="twitter" width="45" height="45"></a>
+						<a href="https://open.spotify.com/artist/1zKD0zKf7sAr8c0EGPMMty?si=tYyyrOpbSHif0jJka0DsxQ"
+							target="_blank">
+							<img src="./Used Resources/Spotify.png" alt="insta" width="45" height="45"></a>
+					</ul>
+				</div>
+				</div>
+
+			</ul>
+		</nav>
+
+		<label for="nav-toggle" title="Show navbar" class="nav-toggle-label">
+			<span></span>
+		</label>
+
+	</header>
+
+	<div class="navbox"></div>
+
+
+
+	<div class="merge">
+		<img class="portfoliopic" src="./Used Resources/Portfolio Main Picture.png" height="700" alt="portfoliopic" />
+		<h5>
+			Portfolio
+		</h5>
+
+		<h1>Wildlife</h1>
+
+		<div class="carousel">
+
+			<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+				checked="checked">
+			<div class="carousel-item">
+
+				<img id="wildlife1" src=".\Used Resources\Wildlife 1.jpg"
+					onclick="openModal();currentSlide(1)" width="300px" height="256px" class="hover-shadow cursor"
+					style="margin-left: 25px; border: 2px solid rgb(255, 255, 255);">
+			</div>
+			<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+			<div class="carousel-item">
+
+				<img id="wildlife2" src=".\Used Resources\Wildlife 2.jpg"
+					onclick="openModal();currentSlide(2)" width="525px" height="256px" class="hover-shadow cursor"
+					style="border: 2px solid rgb(255, 255, 255); display: none; margin-left: -85px;">
+			</div>
+
+			<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+			<div class="carousel-item">
+
+				<img id="wildlife3" src=".\Used Resources\Wildlife 3.jpg"
+					onclick="openModal();currentSlide(3)" width="560px" height="256px" class="hover-shadow cursor"
+					style="border: 2px solid rgb(255, 255, 255); display: none; margin-left: -100px;">
+			</div>
+
+
+			<label for="carousel-3" class="carousel-control prev control-1"
+				onclick="wildlife1off(); wildlife3on();">‹</label>
+			<label for="carousel-2" class="carousel-control next control-1"
+				onclick="wildlife1off(); wildlife2on();">›</label>
+			<label for="carousel-1" class="carousel-control prev control-2"
+				onclick="wildlife2off(); wildlife1on();">‹</label>
+			<label for="carousel-3" class="carousel-control next control-2"
+				onclick="wildlife2off(); wildlife3on();">›</label>
+			<label for="carousel-2" class="carousel-control prev control-3"
+				onclick="wildlife3off(); wildlife2on();">‹</label>
+			<label for="carousel-1" class="carousel-control next control-3"
+				onclick="wildlife3off(); wildlife1on();">›</label>
+			<ol class="carousel-indicators">
+				<li>
+
+					<label for="carousel-1" class="carousel-bullet"
+						onclick="wildlife1on(); wildlife3off(); wildlife2off();">•</label>
+				</li>
+				<li>
+					<label for="carousel-2" class="carousel-bullet"
+						onclick="wildlife2on(); wildlife3off(); wildlife1off();">•</label>
+				</li>
+				<li>
+					<label for="carousel-3" class="carousel-bullet"
+						onclick="wildlife3on(); wildlife1off(); wildlife2off();">•</label>
+				</li>
+
+			</ol>
+		</div>
+	</div>
+
+
+
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+
+			<div class="mySlides">
+				<div class="numbertext">1 / 3</div>
+				<img src=".\Used Resources\Wildlife 1.jpg"
+					style="height: 670px; margin-left: 300px;">
+			</div>
+
+
+
+			<div class="mySlides">
+				<div class="numbertext">2 / 3</div>
+				<img src=".\Used Resources\Wildlife 2.jpg"
+					style="height: 670px; margin-left: 120px">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">3 / 3</div>
+				<img src=".\Used Resources\Wildlife 3.jpg"
+					style="height: 670px; margin-left: 70px">
+			</div>
+
+
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+
+			<div class="column">
+				<img class="demo cursor"
+					src=".\Used Resources\Wildlife 1.jpg"
+					style="height: 167px" onclick="currentSlide(1)" alt="A Solo Lion (shot w/ 800d 55-250mm)">
+			</div>
+			<div class="column">
+				<img class="demo cursor"
+					src=".\Used Resources\Wildlife 2.jpg"
+					style="height: 167px" onclick="currentSlide(2)" alt="A Lion Cub (shot w/ 800d 55-250mm)">
+			</div>
+			<div class="column">
+				<img class="demo cursor"
+					src=".\Used Resources\Wildlife 3.jpg"
+					style="height: 167px" onclick="currentSlide(3)" alt="2 Lions (shot w/ 800d 55-250mm)">
+			</div>
+
+
+		</div>
+	</div>
+
+
+	<h1>Wedding</h1>
+
+	<div class="carousel1">
+
+		<input class="carousel1-open" type="radio" id="carousel1-1" name="carousel1" aria-hidden="true" hidden=""
+			checked="checked">
+		<div class="carousel1-item">
+
+			<img id="wedding1" src=".\Used Resources\wedding 1.jpg"
+				onclick="openModal2();currentSlide2(1)" width="560px" height="256px" class="hover-shadow cursor2"
+				style="border: 2px solid rgb(255, 255, 255); margin-left: -100px; ">
+		</div>
+		<input class="carousel1-open" type="radio" id="carousel1-2" name="carousel1" aria-hidden="true" hidden="">
+		<div class="carousel1-item">
+
+			<img id="wedding2" src=".\Used Resources\wedding 2.jpg"
+				onclick="openModal2();currentSlide2(2)" width="560px" height="256px" class="hover-shadow cursor2"
+				style="border: 2px solid rgb(255, 255, 255); display: none; margin-left: -100px;">
+		</div>
+
+		<input class="carousel1-open" type="radio" id="carousel1-3" name="carousel1" aria-hidden="true" hidden="">
+		<div class="carousel1-item">
+
+			<img id="wedding3" src=".\Used Resources\wedding 3.jpg"
+				onclick="openModal2();currentSlide2(3)" width="560px" height="256px" class="hover-shadow cursor2"
+				style="border: 2px solid rgb(255, 255, 255); display: none; margin-left: -100px;">
+		</div>
+
+		<label for="carousel1-3" class="carousel1-control prev control-1"
+			onclick="wedding1off(); wedding3on();">‹</label>
+		<label for="carousel1-2" class="carousel1-control next control-1"
+			onclick="wedding1off(); wedding2on();">›</label>
+		<label for="carousel1-1" class="carousel1-control prev control-2"
+			onclick="wedding2off(); wedding1on();">‹</label>
+		<label for="carousel1-3" class="carousel1-control next control-2"
+			onclick="wedding2off(); wedding3on();">›</label>
+		<label for="carousel1-2" class="carousel1-control prev control-3"
+			onclick="wedding3off(); wedding2on();">‹</label>
+		<label for="carousel1-1" class="carousel1-control next control-3"
+			onclick="wedding3off(); wedding1on();">›</label>
+		<ol class="carousel1-indicators">
+			<li>
+
+				<label for="carousel1-1" class="carousel1-bullet"
+					onclick="wedding1on(); wedding3off(); wedding2off();">•</label>
+			</li>
+			<li>
+				<label for="carousel1-2" class="carousel1-bullet"
+					onclick="wedding2on(); wedding3off(); wedding1off();">•</label>
+			</li>
+			<li>
+				<label for="carousel1-3" class="carousel1-bullet"
+					onclick="wedding3on(); wedding1off(); wedding2off();">•</label>
+			</li>
+
+		</ol>
+
+		<div id="myModal2" class="modal2">
+			<span class="close cursor2" onclick="closeModal2()">&times;</span>
+			<div class="modal2-content">
+
+				<div class="mySlides2">
+					<div class="numbertext2">1 / 3</div>
+					<img src=".\Used Resources\wedding 1.jpg"
+						style="margin-left: 120px;height: 670px;">
+				</div>
+
+
+				<div class="mySlides2">
+					<div class="numbertext2">2 / 3</div>
+					<img src=".\Used Resources\wedding 2.jpg"
+						style="margin-left: 120px;height: 670px;">
+				</div>
+
+				<div class="mySlides2">
+					<div class="numbertext2">3 / 3</div>
+					<img src=".\Used Resources\wedding 3.jpg"
+						style="margin-left: 120px;height: 670px;">
+				</div>
+
+
+				<a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides2(1)">&#10095;</a>
+
+				<div class="caption-container2">
+					<p id="caption2"></p>
+				</div>
+
+
+				<div class="column2">
+					<img class="demo2 cursor2"
+						src=".\Used Resources\wedding 1.jpg"
+						style="height: 167px;" onclick="currentSlide2(1)"
+						alt="Gokul and Keerthi Wedding 1 (shot w/ 800d 18-55mm)">
+				</div>
+				<div class="column2">
+					<img class="demo2 cursor2"
+						src=".\Used Resources\wedding 2.jpg"
+						style="height: 167px" onclick="currentSlide2(2)" alt="Keethi Solo (shot w/ 800d 18-55mm)">
+				</div>
+				<div class="column2">
+					<img class="demo2 cursor2"
+						src=".\Used Resources\wedding 3.jpg"
+						style="height: 167px" onclick="currentSlide2(3)"
+						alt="Gokul and Keerthi Duo (shot w/ 800d 18-55mm)">
+				</div>
+
+			</div>
+		</div>
+
+
+		<h1>Architecture</h1>
+
+
+		<div class="carousel2">
+
+			<input class="carousel2-open" type="radio" id="carousel2-1" name="carousel2" aria-hidden="true" hidden=""
+				checked="checked">
+			<div class="carousel2-item">
+
+				<img id="arch1" src=".\Used Resources\arch 1.jpg"
+					onclick="openModal3();currentSlide3(1)" width="351px" height="256px" class="hover-shadow cursor2"
+					style="border: 2px solid rgb(255, 255, 255);">
+			</div>
+			<input class="carousel2-open" type="radio" id="carousel2-2" name="carousel2" aria-hidden="true" hidden="">
+			<div class="carousel2-item">
+
+				<img id="arch2" src=".\Used Resources\arch 2.jpg"
+					onclick="openModal3();currentSlide3(2)" width="351px" height="256px" class="hover-shadow cursor2"
+					style="border: 2px solid rgb(255, 255, 255); display: none;">
+			</div>
+
+			<input class="carousel2-open" type="radio" id="carousel2-3" name="carousel2" aria-hidden="true" hidden="">
+			<div class="carousel2-item">
+
+				<img id="arch3" src=".\Used Resources\arch 3.jpg"
+					onclick="openModal3();currentSlide3(3)" width="351px" height="256px" class="hover-shadow cursor2"
+					style="border: 2px solid rgb(255, 255, 255); display: none;">
+			</div>
+
+			<label for="carousel2-3" class="carousel2-control prev control-1" onclick="arch1off(); arch3on();">‹</label>
+			<label for="carousel2-2" class="carousel2-control next control-1" onclick="arch1off(); arch2on();">›</label>
+			<label for="carousel2-1" class="carousel2-control prev control-2" onclick="arch2off(); arch1on();">‹</label>
+			<label for="carousel2-3" class="carousel2-control next control-2" onclick="arch2off(); arch3on();">›</label>
+			<label for="carousel2-2" class="carousel2-control prev control-3" onclick="arch3off(); arch2on();">‹</label>
+			<label for="carousel2-1" class="carousel2-control next control-3" onclick="arch3off(); arch1on();">›</label>
+			<ol class="carousel2-indicators">
+				<li>
+
+					<label for="carousel2-1" class="carousel2-bullet"
+						onclick="arch1on(); arch3off(); arch2off();">•</label>
+				</li>
+				<li>
+					<label for="carousel2-2" class="carousel2-bullet"
+						onclick="arch2on(); arch3off(); arch1off();">•</label>
+				</li>
+				<li>
+					<label for="carousel2-3" class="carousel2-bullet"
+						onclick="arch3on(); arch1off(); arch2off();">•</label>
+				</li>
+
+			</ol>
+
+			<div id="myModal3" class="modal3">
+				<span class="close cursor3" onclick="closeModal3()">&times;</span>
+				<div class="modal2-content">
+
+					<div class="mySlides3">
+						<div class="numbertext2">1 / 3</div>
+						<img src=".\Used Resources\arch 1.jpg"
+							style="margin-left: 300px;height: 670px;">
+					</div>
+
+
+					<div class="mySlides3">
+						<div class="numbertext2">2 / 3</div>
+						<img src=".\Used Resources\arch 2.jpg"
+							style="margin-left: 300px;height: 670px;">
+					</div>
+
+					<div class="mySlides3">
+						<div class="numbertext2">3 / 3</div>
+						<img src=".\Used Resources\arch 3.jpg"
+							style="margin-left: 300px;height: 670px;">
+					</div>
+
+
+					<a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides3(1)">&#10095;</a>
+
+					<div class="caption-container3">
+						<p id="caption3"></p>
+					</div>
+
+
+					<div class="column3">
+						<img class="demo3 cursor3"
+							src=".\Used Resources\arch 1.jpg"
+							style="height: 167px;" onclick="currentSlide3(1)"
+							alt="Holiday Inn Balastier (shot w/ Note 20 Ultra Ultrawide)">
+					</div>
+					<div class="column3">
+						<img class="demo3 cursor3"
+							src=".\Used Resources\arch 2.jpg"
+							style="height: 167px" onclick="currentSlide3(2)"
+							alt="Plaza Singapura (shot w/ Note 20 Ultra Ultrawide)">
+					</div>
+					<div class="column3">
+						<img class="demo3 cursor3"
+							src=".\Used Resources\arch 3.jpg"
+							style="height: 167px" onclick="currentSlide3(3)"
+							alt="Marina One (shot w/ Note 20 Ultra Ultrawide)">
+					</div>
+
+				</div>
+			</div>
+
+
+			<h1>Astrography</h1>
+
+
+			<div class="carousel3">
+
+				<input class="carousel3-open" type="radio" id="carousel3-1" name="carousel3" aria-hidden="true"
+					hidden="" checked="checked">
+				<div class="carousel3-item">
+
+					<img id="astra1" src=".\Used Resources\astra 3.jpg"
+						onclick="openModal4();currentSlide4(1)" width="351px" height="256px"
+						class="hover-shadow cursor2" style="border: 2px solid rgb(255, 255, 255);">
+				</div>
+				<input class="carousel3-open" type="radio" id="carousel3-2" name="carousel3" aria-hidden="true"
+					hidden="">
+				<div class="carousel3-item">
+
+					<img id="astra2" src=".\Used Resources\astra 2.jpg"
+						onclick="openModal4();currentSlide4(2)" width="351px" height="256px"
+						class="hover-shadow cursor2" style="border: 2px solid rgb(255, 255, 255); display: none;">
+				</div>
+
+				<input class="carousel3-open" type="radio" id="carousel3-3" name="carousel3" aria-hidden="true"
+					hidden="">
+				<div class="carousel3-item">
+
+					<img id="astra3" src=".\Used Resources\astra 1.jpg"
+						onclick="openModal4();currentSlide4(3)" width="351px" height="256px"
+						class="hover-shadow cursor2" style="border: 2px solid rgb(255, 255, 255); display: none;">
+				</div>
+
+				<label for="carousel3-3" class="carousel3-control prev control-1"
+					onclick="astra1off(); astra3on();">‹</label>
+				<label for="carousel3-2" class="carousel3-control next control-1"
+					onclick="astra1off(); astra2on();">›</label>
+				<label for="carousel3-1" class="carousel3-control prev control-2"
+					onclick="astra2off(); astra1on();">‹</label>
+				<label for="carousel3-3" class="carousel3-control next control-2"
+					onclick="astra2off(); astra3on();">›</label>
+				<label for="carousel3-2" class="carousel3-control prev control-3"
+					onclick="astra3off(); astra2on();">‹</label>
+				<label for="carousel3-1" class="carousel3-control next control-3"
+					onclick="astra3off(); astra1on();">›</label>
+				<ol class="carousel3-indicators">
+					<li>
+
+						<label for="carousel3-1" class="carousel3-bullet"
+							onclick="astra1on(); astra3off(); astra2off();">•</label>
+					</li>
+					<li>
+						<label for="carousel3-2" class="carousel3-bullet"
+							onclick="astra2on(); astra3off(); astra1off();">•</label>
+					</li>
+					<li>
+						<label for="carousel3-3" class="carousel3-bullet"
+							onclick="astra3on(); astra1off(); astra2off();">•</label>
+					</li>
+
+				</ol>
+
+				<div id="myModal4" class="modal4">
+					<span class="close cursor4" onclick="closeModal4()">&times;</span>
+					<div class="modal4-content">
+
+						<div class="mySlides4">
+							<div class="numbertext3">1 / 3</div>
+							<img src=".\Used Resources\astra 3.jpg"
+								style="margin-left: 300px;height: 670px;">
+						</div>
+
+
+						<div class="mySlides4">
+							<div class="numbertext3">2 / 3</div>
+							<img src=".\Used Resources\astra 2 full screen.jpg"
+								style="margin-left: 110px;height: 670px;">
+						</div>
+
+						<div class="mySlides4">
+							<div class="numbertext3">3 / 3</div>
+							<img src=".\Used Resources\astra 1 full screen.jpg"
+								style="margin-left: 110px;height: 670px;">
+						</div>
+
+
+						<a class="prev" onclick="plusSlides4(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides4(1)">&#10095;</a>
+
+						<div class="caption-container4">
+							<p id="caption4"></p>
+						</div>
+
+
+						<div class="column4">
+							<img class="demo4 cursor4"
+								src=".\Used Resources\astra 3.jpg"
+								style="height: 167px;" onclick="currentSlide4(1)"
+								alt="Fireworks (shot w/ 800D 55-250mm) ">
+						</div>
+						<div class="column4">
+							<img class="demo4 cursor4"
+								src=".\Used Resources\astra 2.jpg"
+								style="height: 167px" onclick="currentSlide4(2)" alt="The Moon (shot w/ 800D 55-250mm)">
+						</div>
+						<div class="column4">
+							<img class="demo4 cursor4"
+								src=".\Used Resources\astra 1 full screen.jpg"
+								style="height: 167px" onclick="currentSlide4(3)"
+								alt="Burning Moon (shot w/ 800D 55-250mm)">
+						</div>
+
+					</div>
+				</div>
+
+
+				<h1>Photo shoot</h1>
+
+
+				<div class="carousel4">
+
+					<input class="carousel4-open" type="radio" id="carousel4-1" name="carousel4" aria-hidden="true"
+						hidden="" checked="checked">
+					<div class="carousel4-item">
+
+						<img id="SMU1" src=".\Used Resources\smu 1.jpg"
+							onclick="openModal5();currentSlide5(1)" width="560px" height="256px"
+							class="hover-shadow cursor2"
+							style="border: 2px solid rgb(255, 255, 255); margin-left: -100px;">
+					</div>
+					<input class="carousel4-open" type="radio" id="carousel4-2" name="carousel4" aria-hidden="true"
+						hidden="">
+					<div class="carousel4-item">
+
+						<img id="SMU2" src=".\Used Resources\smu 2.jpg"
+							onclick="openModal5();currentSlide5(2)" width="560px" height="256px"
+							class="hover-shadow cursor2"
+							style="border: 2px solid rgb(255, 255, 255); display: none; margin-left: -100px;">
+					</div>
+
+					<input class="carousel4-open" type="radio" id="carousel4-3" name="carousel4" aria-hidden="true"
+						hidden="">
+					<div class="carousel4-item">
+
+						<img id="SMU3" src=".\Used Resources\smu 3.jpg"
+							onclick="openModal5();currentSlide5(3)" width="560px" height="256px"
+							class="hover-shadow cursor2"
+							style="border: 2px solid rgb(255, 255, 255); display: none;margin-left: -100px;">
+					</div>
+
+					<label for="carousel4-3" class="carousel4-control prev control-1"
+						onclick="SMU1off(); SMU3on();">‹</label>
+					<label for="carousel4-2" class="carousel4-control next control-1"
+						onclick="SMU1off(); SMU2on();">›</label>
+					<label for="carousel4-1" class="carousel4-control prev control-2"
+						onclick="SMU2off(); SMU1on();">‹</label>
+					<label for="carousel4-3" class="carousel4-control next control-2"
+						onclick="SMU2off(); SMU3on();">›</label>
+					<label for="carousel4-2" class="carousel4-control prev control-3"
+						onclick="SMU3off(); SMU2on();">‹</label>
+					<label for="carousel4-1" class="carousel4-control next control-3"
+						onclick="SMU3off(); SMU1on();">›</label>
+					<ol class="carousel4-indicators">
+						<li>
+
+							<label for="carousel4-1" class="carousel4-bullet"
+								onclick="SMU1on(); SMU3off(); SMU2off();">•</label>
+						</li>
+						<li>
+							<label for="carousel4-2" class="carousel4-bullet"
+								onclick="SMU2on(); SMU3off(); SMU1off();">•</label>
+						</li>
+						<li>
+							<label for="carousel4-3" class="carousel4-bullet"
+								onclick="SMU3on(); SMU1off(); SMU2off();">•</label>
+						</li>
+
+					</ol>
+
+					<div id="myModal5" class="modal5">
+						<span class="close cursor5" onclick="closeModal5()">&times;</span>
+						<div class="modal5-content">
+
+							<div class="mySlides5">
+								<div class="numbertext5">1 / 3</div>
+								<img src=".\Used Resources\smu 1.jpg"
+									style="margin-left: 90px;height: 670px;">
+							</div>
+
+
+							<div class="mySlides5">
+								<div class="numbertext5">2 / 3</div>
+								<img src=".\Used Resources\smu 2.jpg"
+									style="margin-left: 90px;height: 670px;">
+							</div>
+
+							<div class="mySlides5">
+								<div class="numbertext5">3 / 3</div>
+								<img src=".\Used Resources\smu 3.jpg"
+									style="margin-left: 90px;height: 670px;">
+							</div>
+
+
+							<a class="prev" onclick="plusSlides5(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides5(1)">&#10095;</a>
+
+							<div class="caption-container5">
+								<p id="caption5"></p>
+							</div>
+
+
+							<div class="column5">
+								<img class="demo5 cursor5"
+									src=".\Used Resources\smu 1.jpg"
+									style="height: 167px;" onclick="currentSlide5(1)"
+									alt="SMU Grad Shoot 1 (shot w/ 800D 18-55mm)">
+							</div>
+							<div class="column5">
+								<img class="demo5 cursor5"
+									src=".\Used Resources\smu 2.jpg"
+									style="height: 167px" onclick="currentSlide5(2)"
+									alt="SMU Grad Shoot 2 (shot w/ 800D 18-55mm)">
+							</div>
+							<div class="column5">
+								<img class="demo5 cursor5"
+									src=".\Used Resources\smu 3.jpg"
+									style="height: 167px" onclick="currentSlide5(3)"
+									alt="SMU Grad Shoot 3 (shot w/ 800D 18-55mm)">
+							</div>
+
+						</div>
+					</div>
+
+
+
+
+					<footer>
+						<div class="container">
+							<div class="hover-item">
+								<a href="#top"><img class="backtotop"
+										src="./Used Resources/Back to top button.png" /></a>
+							</div>
+
+							<div class="footercontainer overlay">
+								<ul class="footertext">
+									© 2023 Saimadhav - All Right Reserved.
+								</ul>
+
+								<ul class="footerl" style="list-style: none;">
+									<li><a href="home.html" title="home">Home</a></li>
+									<li><a href="about.html" title="about">About</a></li>
+									<li><a href="portfolio.html" title="portfolio">Portfolio</a></li>
+									<li><a href="contact.html" title="contact">Contact</a></li>
+								</ul>
+
+
+							</div>
+
+						</div>
+					</footer>
+
+
+
+					<script>
+
+						/* Pop Up Javascript */
+
+						$(document).ready(function () {
+
+							var sync1 = $("#sync1");
+							var sync2 = $("#sync2");
+							var slidesPerPage = 4; //globaly define number of elements per page
+							var syncedSecondary = true;
+
+							sync1.owlCarousel({
+								items: 1,
+								slideSpeed: 2000,
+								nav: true,
+								//autoplay: true,
+								dots: true,
+								loop: true,
+								responsiveRefreshRate: 200,
+								navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #FFF;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #FFF;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
+							}).on('changed.owl.carousel', syncPosition);
+
+							sync2
+								.on('initialized.owl.carousel', function () {
+									sync2.find(".owl-item").eq(0).addClass("current");
+								})
+								.owlCarousel({
+									items: slidesPerPage,
+									dots: true,
+									nav: true,
+									smartSpeed: 200,
+									slideSpeed: 500,
+									slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+									responsiveRefreshRate: 100
+								}).on('changed.owl.carousel', syncPosition2);
+
+							function syncPosition(el) {
+								//if you set loop to false, you have to restore this next line
+								//var current = el.item.index;
+
+								//if you disable loop you have to comment this block
+								var count = el.item.count - 1;
+								var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+
+								if (current < 0) {
+									current = count;
+								}
+								if (current > count) {
+									current = 0;
+								}
+
+								//end block
+
+								sync2
+									.find(".owl-item")
+									.removeClass("current")
+									.eq(current)
+									.addClass("current");
+								var onscreen = sync2.find('.owl-item.active').length - 1;
+								var start = sync2.find('.owl-item.active').first().index();
+								var end = sync2.find('.owl-item.active').last().index();
+
+								if (current > end) {
+									sync2.data('owl.carousel').to(current, 100, true);
+								}
+								if (current < start) {
+									sync2.data('owl.carousel').to(current - onscreen, 100, true);
+								}
+							}
+
+							function syncPosition2(el) {
+								if (syncedSecondary) {
+									var number = el.item.index;
+									sync1.data('owl.carousel').to(number, 100, true);
+								}
+							}
+
+							sync2.on("click", ".owl-item", function (e) {
+								e.preventDefault();
+								var number = $(this).index();
+								sync1.data('owl.carousel').to(number, 300, true);
+							});
+						});
+
+
+
+
+
+
+
+						$(document).ready(function () {
+
+							$('.image-popup-vertical-fit').magnificPopup({
+								type: 'image',
+								closeOnContentClick: true,
+								mainClass: 'mfp-img-mobile',
+								image: {
+									verticalFit: true
+								}
+
+							});
+
+							$('.image-popup-fit-width').magnificPopup({
+								type: 'image',
+								closeOnContentClick: true,
+								image: {
+									verticalFit: false
+								}
+							});
+
+							$('.image-popup-no-margins').magnificPopup({
+								type: 'image',
+								closeOnContentClick: true,
+								closeBtnInside: false,
+								fixedContentPos: true,
+								mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+								image: {
+									verticalFit: true
+								},
+								zoom: {
+									enabled: true,
+									duration: 300 // don't foget to change the duration also in CSS
+								}
+							});
+
+						});
+
+						/* Carousel Javascript */
+
+						/* wildlife modal */
+
+						function openModal() {
+							document.getElementById("myModal").style.display = "block";
+						}
+
+						function closeModal() {
+							document.getElementById("myModal").style.display = "none";
+						}
+
+						var slideIndex = 1;
+						showSlides(slideIndex);
+
+						function plusSlides(n) {
+							showSlides(slideIndex += n);
+						}
+
+						function currentSlide(n) {
+							showSlides(slideIndex = n);
+						}
+
+						function showSlides(n) {
+							var i;
+							var slides = document.getElementsByClassName("mySlides");
+							var dots = document.getElementsByClassName("demo");
+							var captionText = document.getElementById("caption");
+							if (n > slides.length) { slideIndex = 1 }
+							if (n < 1) { slideIndex = slides.length }
+							for (i = 0; i < slides.length; i++) {
+								slides[i].style.display = "none";
+							}
+							for (i = 0; i < dots.length; i++) {
+								dots[i].className = dots[i].className.replace(" active", "");
+							}
+							slides[slideIndex - 1].style.display = "block";
+							dots[slideIndex - 1].className += " active";
+							captionText.innerHTML = dots[slideIndex - 1].alt;
+						}
+
+
+						function wildlife1on() {
+							var x = document.getElementById("wildlife1");
+
+							x.style.display = "block";
+
+						}
+
+						function wildlife1off() {
+							var x = document.getElementById("wildlife1");
+
+							x.style.display = "none";
+
+						}
+
+						function wildlife2on() {
+							var x = document.getElementById("wildlife2");
+
+							x.style.display = "block";
+
+						}
+
+						function wildlife2off() {
+							var x = document.getElementById("wildlife2");
+
+							x.style.display = "none";
+
+						}
+
+						function wildlife3on() {
+							var x = document.getElementById("wildlife3");
+
+							x.style.display = "block";
+
+						}
+
+						function wildlife3off() {
+							var x = document.getElementById("wildlife3");
+
+							x.style.display = "none";
+
+						}
+
+
+						/* wedding modal */
+
+						function openModal2() {
+							document.getElementById("myModal2").style.display = "block";
+						}
+
+						function closeModal2() {
+							document.getElementById("myModal2").style.display = "none";
+						}
+
+						var slideIndex2 = 1;
+						showSlides2(slideIndex2);
+
+						function plusSlides2(n) {
+							showSlides2(slideIndex2 += n);
+						}
+
+						function currentSlide2(n) {
+							showSlides2(slideIndex2 = n);
+						}
+
+						function showSlides2(n) {
+							var j;
+							var slides2 = document.getElementsByClassName("mySlides2");
+							var dots2 = document.getElementsByClassName("demo2");
+							var captionText2 = document.getElementById("caption2");
+							if (n > slides2.length) { slideIndex2 = 1 }
+							if (n < 1) { slideIndex2 = slides2.length }
+							for (j = 0; j < slides2.length; j++) {
+								slides2[j].style.display = "none";
+							}
+							for (j = 0; j < dots2.length; j++) {
+								dots2[j].className = dots2[j].className.replace(" active2", "");
+							}
+							slides2[slideIndex2 - 1].style.display = "block";
+							dots2[slideIndex2 - 1].className += " active2";
+							captionText2.innerHTML = dots2[slideIndex2 - 1].alt;
+						}
+
+						function wedding1on() {
+							var x = document.getElementById("wedding1");
+
+							x.style.display = "block";
+
+						}
+
+						function wedding1off() {
+							var x = document.getElementById("wedding1");
+
+							x.style.display = "none";
+
+						}
+
+						function wedding2on() {
+							var x = document.getElementById("wedding2");
+
+							x.style.display = "block";
+
+						}
+
+						function wedding2off() {
+							var x = document.getElementById("wedding2");
+
+							x.style.display = "none";
+
+						}
+
+						function wedding3on() {
+							var x = document.getElementById("wedding3");
+
+							x.style.display = "block";
+
+						}
+
+						function wedding3off() {
+							var x = document.getElementById("wedding3");
+
+							x.style.display = "none";
+
+						}
+
+
+						/* arch modal */
+
+
+
+						function openModal3() {
+							document.getElementById("myModal3").style.display = "block";
+						}
+
+						function closeModal3() {
+							document.getElementById("myModal3").style.display = "none";
+						}
+
+						var slideIndex3 = 1;
+						showSlides2(slideIndex2);
+
+						function plusSlides3(n) {
+							showSlides3(slideIndex3 += n);
+						}
+
+						function currentSlide3(n) {
+							showSlides3(slideIndex3 = n);
+						}
+
+						function showSlides3(n) {
+							var j;
+							var slides3 = document.getElementsByClassName("mySlides3");
+							var dots3 = document.getElementsByClassName("demo3");
+							var captionText3 = document.getElementById("caption3");
+							if (n > slides3.length) { slideIndex3 = 1 }
+							if (n < 1) { slideIndex3 = slides3.length }
+							for (j = 0; j < slides3.length; j++) {
+								slides3[j].style.display = "none";
+							}
+							for (j = 0; j < dots3.length; j++) {
+								dots3[j].className = dots3[j].className.replace(" active3", "");
+							}
+							slides3[slideIndex3 - 1].style.display = "block";
+							dots3[slideIndex3 - 1].className += " active3";
+							captionText3.innerHTML = dots3[slideIndex3 - 1].alt;
+						}
+
+						function arch1on() {
+							var x = document.getElementById("arch1");
+
+							x.style.display = "block";
+
+						}
+
+						function arch1off() {
+							var x = document.getElementById("arch1");
+
+							x.style.display = "none";
+
+						}
+
+						function arch2on() {
+							var x = document.getElementById("arch2");
+
+							x.style.display = "block";
+
+						}
+
+						function arch2off() {
+							var x = document.getElementById("arch2");
+
+							x.style.display = "none";
+
+						}
+
+						function arch3on() {
+							var x = document.getElementById("arch3");
+
+							x.style.display = "block";
+
+						}
+
+						function arch3off() {
+							var x = document.getElementById("arch3");
+
+							x.style.display = "none";
+
+						}
+
+
+
+						/* astra modal */
+
+
+
+						function openModal4() {
+							document.getElementById("myModal4").style.display = "block";
+						}
+
+						function closeModal4() {
+							document.getElementById("myModal4").style.display = "none";
+						}
+
+						var slideIndex4 = 1;
+						showSlides4(slideIndex4);
+
+						function plusSlides4(n) {
+							showSlides4(slideIndex4 += n);
+						}
+
+						function currentSlide4(n) {
+							showSlides4(slideIndex4 = n);
+						}
+
+						function showSlides4(n) {
+							var j;
+							var slides4 = document.getElementsByClassName("mySlides4");
+							var dots4 = document.getElementsByClassName("demo4");
+							var captionText4 = document.getElementById("caption4");
+							if (n > slides4.length) { slideIndex4 = 1 }
+							if (n < 1) { slideIndex4 = slides4.length }
+							for (j = 0; j < slides4.length; j++) {
+								slides4[j].style.display = "none";
+							}
+							for (j = 0; j < dots4.length; j++) {
+								dots4[j].className = dots4[j].className.replace(" active4", "");
+							}
+							slides4[slideIndex4 - 1].style.display = "block";
+							dots4[slideIndex4 - 1].className += " active4";
+							captionText4.innerHTML = dots4[slideIndex4 - 1].alt;
+						}
+
+
+						function astra1on() {
+							var x = document.getElementById("astra1");
+
+							x.style.display = "block";
+
+						}
+
+						function astra1off() {
+							var x = document.getElementById("astra1");
+
+							x.style.display = "none";
+
+						}
+
+						function astra2on() {
+							var x = document.getElementById("astra2");
+
+							x.style.display = "block";
+
+						}
+
+						function astra2off() {
+							var x = document.getElementById("astra2");
+
+							x.style.display = "none";
+
+						}
+
+						function astra3on() {
+							var x = document.getElementById("astra3");
+
+							x.style.display = "block";
+
+						}
+
+						function astra3off() {
+							var x = document.getElementById("astra3");
+
+							x.style.display = "none";
+
+						}
+
+						/* SMU modal */
+
+
+
+						function openModal5() {
+							document.getElementById("myModal5").style.display = "block";
+						}
+
+						function closeModal5() {
+							document.getElementById("myModal5").style.display = "none";
+						}
+
+						var slideIndex5 = 1;
+						showSlides5(slideIndex5);
+
+						function plusSlides5(n) {
+							showSlides5(slideIndex5 += n);
+						}
+
+						function currentSlide5(n) {
+							showSlides5(slideIndex5 = n);
+						}
+
+						function showSlides5(n) {
+							var j;
+							var slides5 = document.getElementsByClassName("mySlides5");
+							var dots5 = document.getElementsByClassName("demo5");
+							var captionText5 = document.getElementById("caption5");
+							if (n > slides5.length) { slideIndex5 = 1 }
+							if (n < 1) { slideIndex5 = slides5.length }
+							for (j = 0; j < slides5.length; j++) {
+								slides5[j].style.display = "none";
+							}
+							for (j = 0; j < dots5.length; j++) {
+								dots5[j].className = dots5[j].className.replace(" active5", "");
+							}
+							slides5[slideIndex5 - 1].style.display = "block";
+							dots5[slideIndex5 - 1].className += " active5";
+							captionText5.innerHTML = dots5[slideIndex5 - 1].alt;
+						}
+
+
+						function SMU1on() {
+							var x = document.getElementById("SMU1");
+
+							x.style.display = "block";
+
+						}
+
+						function SMU1off() {
+							var x = document.getElementById("SMU1");
+
+							x.style.display = "none";
+
+						}
+
+						function SMU2on() {
+							var x = document.getElementById("SMU2");
+
+							x.style.display = "block";
+
+						}
+
+						function SMU2off() {
+							var x = document.getElementById("SMU2");
+
+							x.style.display = "none";
+
+						}
+
+						function SMU3on() {
+							var x = document.getElementById("SMU3");
+
+							x.style.display = "block";
+
+						}
+
+						function SMU3off() {
+							var x = document.getElementById("SMU3");
+
+							x.style.display = "none";
+
+						}
+
+
+
+
+					</script>
+
+
+
+
+
+</body>
+
+</html>

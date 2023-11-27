@@ -1,0 +1,1606 @@
+@font-face {
+    font-family: Euphoria Script;
+    src: url(../fonts/EuphoriaScript-Regular.ttf);
+
+}
+
+@font-face {
+    font-family: Machiato;
+    src: url(../fonts/Machiato.ttf);
+    font-weight: 1000;
+}
+
+@font-face {
+    font-family: Monotype Corsiva;
+    src: url(../fonts/MTCORSVA.TTF);
+}
+
+@font-face {
+    font-family: Overtis Signature;
+    src: url(../fonts/Overtis.ttf);
+    font-weight: 1000;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    background-color: black;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    position: relative;
+    width: 100vw;
+    z-index: 90;
+
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+
+    max-width: 10%;
+    height: auto;
+    z-index: 999;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    text-align: left;
+    top: 100%;
+    display: flex;
+    width: 100vw;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+
+}
+
+nav a {
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+
+    padding-right: 0.6em;
+    color: white;
+    font-family: Euphoria Script;
+    font-size: 70px;
+    padding-left: 5px;
+
+}
+
+nav a:hover {
+    color: lightgrey;
+}
+
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+
+    float: left;
+    margin-left: 17%;
+    justify-content: flex-end;
+    height: auto;
+}
+
+
+.nav-toggle {
+    display: none;
+
+}
+
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    margin-right: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 35px;
+
+
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.socials__links {
+    display: flex;
+    float: right;
+    margin-left: 50px;
+    margin-top: 40px;
+
+    max-width: 40%;
+    height: auto;
+
+}
+
+
+nav li {
+    margin: 1.2rem;
+    margin-right: 100px;
+    display: flex;
+}
+
+.pages {
+    display: flex;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    nav .homepic {
+        margin-top: 150px;
+
+    }
+
+
+
+    .logo {
+
+        top: 20px;
+        left: 50px;
+        position: fixed;
+
+    }
+
+    .desc {
+        font-size: 20px;
+        margin-top: -3rem;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    span {
+        position: fixed;
+        top: 30px;
+        right: 20px;
+    }
+
+    .videowidth {
+        width: "100px";
+    }
+
+
+
+    .socials__links {
+        margin-right: 100px;
+        margin-bottom: 40px;
+    }
+
+    .pages {
+        display: block;
+        margin-left: 120px;
+    }
+
+    .iamsaimadhav {
+        margin-bottom: -120px;
+    }
+
+    nav {
+        position: fixed;
+        top: 50px;
+
+    }
+
+    .navbox {
+        position: fixed;
+        top: 0px;
+        background-color: #000000;
+        width: 100%;
+        height: 65px;
+        z-index: 10;
+    }
+
+
+
+
+}
+
+
+@media screen and (min-width: 800px) {
+
+
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+
+
+    }
+
+    .logo {
+        grid-column: 2 / 3;
+
+    }
+
+    nav {
+        grid-column: 3 / 4;
+        all: unset;
+    }
+
+    nav a {
+        opacity: 1;
+    }
+
+    nav ul {
+        display: flex;
+    
+    }
+
+    span {
+        position: absolute;
+        top: -200px;
+    }
+
+
+
+
+
+
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.footercontainer {
+
+    left: 10px;
+
+    right: 10px;
+    background-color: #101010;
+
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+
+h5 {
+    color: white;
+    position: absolute;
+    top: 350px;
+    left: 400px;
+
+    font-family: Overtis Signature;
+    font-size: 300px;
+    background-color: transparent;
+
+}
+
+
+.footercontainer {
+
+    left: 10px;
+    bottom: 5px;
+    right: 10px;
+    background-color: #101010;
+
+
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.footertext {
+    padding-top: 1em;
+    background-color: #101010;
+    color: white;
+    padding-left: 1em;
+    font-family: Acumin Pro;
+}
+
+
+.footerl {
+
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+
+}
+
+.footerlinks {
+    display: block;
+    text-align: right;
+    padding: 0.5em;
+    color: white;
+    font-size: 20px;
+    background-color: #101010;
+    font-family: Acumin Pro;
+
+
+}
+
+.footerl a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.7em;
+    color: white;
+    font-family: "Acumin Pro";
+    font-size: 20px;
+    padding-right: 1em;
+    background-color: #101010;
+    padding-right: 2em;
+
+}
+
+.backtotop {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.overlay {
+    position: relative;
+    margin-top: -50px;
+}
+
+
+.hover-item {
+    transition: 0.3s;
+}
+
+.hover-item:hover {
+    transform: translate(0, -10px);
+}
+
+
+h1 {
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    color: white;
+    font-family: Machiato;
+    font-size: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+h1:before {
+    content: "";
+    width: 200px;
+    height: 2px;
+    display: block;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-left: -140px;
+
+}
+
+h1:after {
+    content: "";
+    width: 200px;
+    height: 2px;
+    display: block;
+    background: white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: -140px;
+}
+
+/* Wildlife Carousel */
+
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+
+    background-color: black;
+}
+
+.carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked+.carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+
+    margin-left: 780px;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+    top: 1px;
+    margin-top: 190px;
+}
+
+.carousel-control.next {
+    right: 2%;
+    top: 1px;
+    margin-top: 190px;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+    background-color: transparent;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+
+    background-color: transparent;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+/* Wedding Carousel */
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+
+    background-color: black;
+}
+
+.carousel1 {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.carousel1-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel1-open:checked+.carousel1-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel1-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+
+    margin-left: 780px;
+}
+
+.carousel1-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel1-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel1-control.prev {
+    left: 2%;
+    top: 1px;
+    margin-top: 200px;
+}
+
+.carousel1-control.next {
+    right: 2%;
+    top: 1px;
+    margin-top: 200px;
+}
+
+.carousel1-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel1-1:checked~.control-1,
+#carousel1-2:checked~.control-2,
+#carousel1-3:checked~.control-3 {
+    display: block;
+}
+
+.carousel1-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    margin-top: 320px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.carousel1-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+    background-color: transparent;
+}
+
+.carousel1-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+
+    background-color: transparent;
+}
+
+.carousel1bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel1-1:checked~.control-1~.carousel1-indicators li:nth-child(1) .carousel1-bullet,
+#carousel1-2:checked~.control-2~.carousel1-indicators li:nth-child(2) .carousel1-bullet,
+#carousel1-3:checked~.control-3~.carousel1-indicators li:nth-child(3) .carousel1-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+/* Architechture Carousel */
+
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+
+    background-color: black;
+}
+
+.carousel2 {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.carousel2-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel2-open:checked+.carousel2-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel2-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+
+    margin-left: 780px;
+}
+
+.carousel2-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel2-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel2-control.prev {
+    left: 2%;
+    top: 1px;
+    margin-top: 250px;
+}
+
+.carousel2-control.next {
+    right: 2%;
+    top: 1px;
+    margin-top: 250px;
+}
+
+.carousel2-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel2-1:checked~.control-1,
+#carousel2-2:checked~.control-2,
+#carousel2-3:checked~.control-3 {
+    display: block;
+}
+
+
+.carousel2-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    margin-top: 375px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.carousel2-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+    background-color: transparent;
+}
+
+.carousel2-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+
+    background-color: transparent;
+}
+
+.carousel2-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel2-1:checked~.control-1~.carousel2-indicators li:nth-child(1) .carousel2-bullet,
+#carousel2-2:checked~.control-2~.carousel2-indicators li:nth-child(2) .carousel2-bullet,
+#carousel2-3:checked~.control-3~.carousel2-indicators li:nth-child(3) .carousel2-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+/* Astrography Carousel */
+
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+
+    background-color: black;
+}
+
+.carousel3 {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.carousel3-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel3-open:checked+.carousel3-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel3-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+
+    margin-left: 780px;
+}
+
+.carousel3-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel3-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel3-control.prev {
+    left: 2%;
+    top: 1px;
+    margin-top: 210px;
+}
+
+.carousel3-control.next {
+    right: 2%;
+    top: 1px;
+    margin-top: 210px;
+}
+
+.carousel3-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel3-1:checked~.control-1,
+#carousel3-2:checked~.control-2,
+#carousel3-3:checked~.control-3 {
+    display: block;
+}
+
+
+.carousel3-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    margin-top: 370px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.carousel3-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+    background-color: transparent;
+}
+
+.carousel3-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+
+    background-color: transparent;
+}
+
+.carousel3-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel3-1:checked~.control-1~.carousel3-indicators li:nth-child(1) .carousel3-bullet,
+#carousel3-2:checked~.control-2~.carousel3-indicators li:nth-child(2) .carousel3-bullet,
+#carousel3-3:checked~.control-3~.carousel3-indicators li:nth-child(3) .carousel3-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+/* Photoshoot Carousel */
+
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+
+    background-color: black;
+}
+
+.carousel4 {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.carousel4-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel4-open:checked+.carousel4-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel4-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+
+    margin-left: 780px;
+}
+
+.carousel4-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel4-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel4-control.prev {
+    left: 2%;
+    top: 1px;
+    margin-top: 200px;
+}
+
+.carousel4-control.next {
+    right: 2%;
+    top: 1px;
+    margin-top: 200px;
+}
+
+.carousel4-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel4-1:checked~.control-1,
+#carousel4-2:checked~.control-2,
+#carousel4-3:checked~.control-3 {
+    display: block;
+}
+
+
+.carousel4-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    margin-top: 310px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.carousel4-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+    background-color: transparent;
+}
+
+.carousel4-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+
+    background-color: transparent;
+}
+
+.carousel4-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel4-1:checked~.control-1~.carousel4-indicators li:nth-child(1) .carousel4-bullet,
+#carousel4-2:checked~.control-2~.carousel4-indicators li:nth-child(2) .carousel4-bullet,
+#carousel4-3:checked~.control-3~.carousel4-indicators li:nth-child(3) .carousel4-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+
+
+.row>.column {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 10%;
+    margin-left: 175px;
+}
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+img {
+    margin-bottom: -4px;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+/* modal2*/
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal2-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+
+.column2 {
+    float: left;
+    width: 10%;
+    margin-left: 175px;
+}
+
+.row2>.column2 {
+    padding: 0 8px;
+}
+
+.row2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mySlides2 {
+    display: none;
+}
+
+.demo2 {
+    opacity: 0.6;
+}
+
+.active2,
+.demo2:hover {
+    opacity: 1;
+}
+
+
+
+.cursor2 {
+    cursor: pointer;
+}
+
+.numbertext2 {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container2 {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+/* Modal 3 */
+
+
+.modal3 {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal3-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+
+.column3 {
+    float: left;
+    width: 10%;
+    margin-left: 175px;
+}
+
+.row3>.column3 {
+    padding: 0 8px;
+}
+
+.row3:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mySlides3 {
+    display: none;
+}
+
+
+.demo3 {
+    opacity: 0.6;
+}
+
+.active3,
+.demo3:hover {
+    opacity: 1;
+}
+
+.cursor3 {
+    cursor: pointer;
+}
+
+
+.numbertext3 {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+
+}
+
+.caption-container3 {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+
+
+/* Modal 4 */
+
+
+.modal4 {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal4-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+
+.column4 {
+    float: left;
+    width: 10%;
+    margin-left: 175px;
+}
+
+.row4>.column4 {
+    padding: 0 8px;
+}
+
+.row4:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mySlides4 {
+    display: none;
+}
+
+
+.demo4 {
+    opacity: 0.6;
+}
+
+.active4,
+.demo4:hover {
+    opacity: 1;
+}
+
+.cursor4 {
+    cursor: pointer;
+}
+
+.numbertext4 {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+
+}
+
+.caption-container4 {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+
+
+/* Modal 4 */
+
+
+.modal5 {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal5-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+
+.column5 {
+    float: left;
+    width: 10%;
+    margin-left: 175px;
+}
+
+.row5>.column5 {
+    padding: 0 8px;
+}
+
+.row5:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mySlides5 {
+    display: none;
+}
+
+
+.demo5 {
+    opacity: 0.6;
+}
+
+.active5,
+.demo5:hover {
+    opacity: 1;
+}
+
+.cursor5 {
+    cursor: pointer;
+}
+
+.numbertext5 {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+
+}
+
+.caption-container5 {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
